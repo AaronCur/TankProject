@@ -20,5 +20,7 @@ protected:
 	
 	// main window
 	sf::RenderWindow m_window;
+	sf::Sprite m_sprite;
+	sf::Texture myTexture;
 	
 };

@@ -10,6 +10,7 @@
 // Updates per milliseconds
 static double const MS_PER_UPDATE = 10.0;
 
+
 /// <summary>
 /// @brief Default constructor.
 /// 
@@ -21,6 +22,17 @@ Game::Game()
 
 {	
 	
+	if (!myTexture.loadFromFile("E-100.png"))
+	{
+		std::string s("Error loading texture");
+		throw std::exception(s.c_str());
+	}
+
+	m_sprite.setTexture(myTexture);
+	m_sprite.setOrigin(sf::Vector2f(myTexture.getSize().x / 2 , myTexture.getSize().y / 2));
+	m_sprite.setPosition(sf::Vector2f(500, 500));
+	m_sprite.setRotation(270);
+	m_sprite.rotate(90);
 }
 
 
@@ -115,7 +127,7 @@ void Game::update(double dt)
 void Game::render()
 {
 	m_window.clear(sf::Color(0, 0, 0, 0));
-
+	m_window.draw(m_sprite);
 	m_window.display();
 }
 
