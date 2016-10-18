@@ -10,7 +10,6 @@
 // Updates per milliseconds
 static double const MS_PER_UPDATE = 10.0;
 
-
 /// <summary>
 /// @brief Default constructor.
 /// 
@@ -18,21 +17,48 @@ static double const MS_PER_UPDATE = 10.0;
 /// </summary>
 /// 
 Game::Game()
+
 : m_window(sf::VideoMode(1440, 900, 32), "SFML Playground", sf::Style::Default)
 
 {	
+	int currentLevel = 1;
+
+	if (!LevelLoader::load(currentLevel, m_level))
+	{
+		return;
+	}
+
 	
-	if (!myTexture.loadFromFile("E-100.png"))
+
+	if (!m_texture.loadFromFile("E-100.png"))
 	{
 		std::string s("Error loading texture");
 		throw std::exception(s.c_str());
 	}
-
-	m_sprite.setTexture(myTexture);
-	m_sprite.setOrigin(sf::Vector2f(myTexture.getSize().x / 2 , myTexture.getSize().y / 2));
-	m_sprite.setPosition(sf::Vector2f(500, 500));
+	
+	if (!m_bgTexture.loadFromFile(m_level.m_background.m_fileName))
+	{
+		std::string s("Error loading texture");
+		throw std::exception(s.c_str());
+	}
+	m_sprite.setPosition(m_level.m_tank.m_position.x, m_level.m_tank.m_position.y);
+	
+	m_bgSprite.setTexture(m_bgTexture);
+	
+	m_sprite.setTexture(m_texture);
+	m_sprite.setOrigin(m_texture.getSize().x / 2.0, m_texture.getSize().y / 2.0);
 	m_sprite.setRotation(270);
 	m_sprite.rotate(90);
+
+	sf::Sprite sprite;
+	sprite.setTexture(m_texture);
+	
+	for (auto &obstacle : m_level.m_obstacles)
+	{
+		sprite.setPosition(obstacle.m_position);
+		sprite.rotate(obstacle.m_rotation);
+		m_sprites.push_back(sprite);
+	}
 }
 
 
@@ -123,11 +149,19 @@ void Game::update(double dt)
 /// <summary>
 /// @brief draw the window for the game.
 /// 
+/// draw buttons and text on left side
 /// </summary>
 void Game::render()
 {
+	
 	m_window.clear(sf::Color(0, 0, 0, 0));
+	m_window.draw(m_bgSprite);
 	m_window.draw(m_sprite);
+	for (auto &sprite : m_sprites)
+	{
+		m_window.draw(sprite);
+
+	}
 	m_window.display();
 }
 

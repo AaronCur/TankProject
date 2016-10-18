@@ -1,14 +1,18 @@
 #pragma once
 
 #include <SFML/Graphics.hpp>
+#include "LevelLoader.h"
+
 
 /// <summary>
 /// @brief Main class for the SFML Playground project.
-/// @author AC
+/// 
 /// This will be a single class framework for learning about SFML.
 /// </summary>
 class Game
 {
+	// Load the game level data.
+	LevelData m_level;
 public:
 	Game();	
 	void run();
@@ -21,6 +25,10 @@ protected:
 	// main window
 	sf::RenderWindow m_window;
 	sf::Sprite m_sprite;
-	sf::Texture myTexture;
+	sf::Sprite m_bgSprite;
+	sf::Texture m_bgTexture;
+	sf::Texture m_texture;
+	std::vector<sf::Sprite>  m_sprites;
 	
+
 };

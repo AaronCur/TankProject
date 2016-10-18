@@ -1,0 +1,14 @@
+background:
+   file: background.jpg # Sample comment
+tank:
+   position: {x: 850, y: 100}
+obstacles: 
+   - type: wall
+     position: {x: 100, y: 660}
+     rotation: 0
+   - type: wall
+     position: {x: 134, y: 662}
+     rotation: 10
+   - type: wall
+     position: {x: 167, y: 670}
+     rotation: 20
