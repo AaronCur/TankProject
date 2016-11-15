@@ -3,6 +3,7 @@
 #include <SFML/Graphics.hpp>
 #include "LevelLoader.h"
 #include "Tank.h"
+#include "KeyHandler.h"
 
 
 /// <summary>
@@ -31,6 +32,8 @@ protected:
 	sf::Texture m_texture;
 	std::vector<sf::Sprite>  m_sprites;
 	std::unique_ptr<Tank> m_tank;
+	KeyHandler m_keyHandler;
+	
 	
 
 };

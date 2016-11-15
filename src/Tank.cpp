@@ -3,8 +3,8 @@
 
 double const Tank::DEG_TO_RAD = thor::Pi / 180.0f;
 
-Tank::Tank(sf::Texture const & texture, sf::Vector2f const & pos)
-: m_texture(texture),m_rotation(0) , m_speed(0), m_turretRotation(0)
+Tank::Tank(sf::Texture const & texture, sf::Vector2f const & pos, KeyHandler &key)
+: m_texture(texture),m_rotation(0) , m_speed(0), m_turretRotation(0), m_keyHandler(key)
 {
 	initSprites(pos);
 	
@@ -64,9 +64,16 @@ void Tank::increaseTurretRotation()
 	}
 }
 
+void Tank::snap()
+{
+	m_turretRotation = 0;
+}
+
 
 void Tank::update(double dt)
 {	
+	handleKeyInput();
+	
 	m_tankBase.setPosition(m_tankBase.getPosition().x + cos(m_rotation*DEG_TO_RAD) * m_speed * (dt / 1000),
 		m_tankBase.getPosition().y + sin(m_rotation * DEG_TO_RAD) * m_speed *(dt / 1000));
 	m_tankBase.setRotation(m_rotation);
@@ -99,5 +106,40 @@ void Tank::initSprites(sf::Vector2f const & pos)
 	m_turret.setTextureRect(turretRect);
 	m_turret.setOrigin(turretRect.width / 3.0, turretRect.height / 2.0);
 	m_turret.setPosition(pos);
+
+}
+
+void Tank::handleKeyInput()
+{
+	if (m_keyHandler.isPressed(sf::Keyboard::Key::Up))
+	{
+		increaseSpeed();
+
+	}
+	if (m_keyHandler.isPressed(sf::Keyboard::Key::Down))
+	{
+		decreaseSpeed();
+	}
+	if (m_keyHandler.isPressed(sf::Keyboard::Key::Left))
+	{
+		decreaseRotation();
+	}
+	if (m_keyHandler.isPressed(sf::Keyboard::Key::Right))
+	{
+		increaseRotation();
+	}
+	if (m_keyHandler.isPressed(sf::Keyboard::Key::X))
+	{
+		decreaseTurretRotation();
+	}
+	if (m_keyHandler.isPressed(sf::Keyboard::Key::Z))
+	{
+		increaseTurretRotation();
+	}
+	if (m_keyHandler.isPressed(sf::Keyboard::Key::C))
+	{
+		snap();
+	}
+	
 
 }
