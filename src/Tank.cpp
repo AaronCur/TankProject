@@ -143,3 +143,19 @@ void Tank::handleKeyInput()
 	
 
 }
+
+sf::Sprite const & Tank::getTurretSprite() const
+{
+	return m_turret;
+}
+
+sf::Sprite const & Tank::getBaseSprite() const
+{
+	return m_tankBase;
+}
+
+
+void Tank::stop()
+{
+	m_speed = 0;
+}

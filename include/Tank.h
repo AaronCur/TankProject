@@ -26,12 +26,16 @@ public:
 	double static const DEG_TO_RAD;
 	double newPos;
 	void handleKeyInput();
+	void stop();
+	sf::Sprite const & getTurretSprite() const;
+	sf::Sprite const & getBaseSprite() const;
 	
 private:
 	void initSprites(sf::Vector2f const & pos);
 	sf::Sprite m_tankBase;
 	sf::Sprite m_turret;
 	sf::Texture const & m_texture;
+	
 	KeyHandler &m_keyHandler;
 
 	

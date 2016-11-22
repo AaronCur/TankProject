@@ -23,6 +23,8 @@ protected:
 	void render();
 	void processEvents();	
 	void processGameEvents(sf::Event&);
+	void generateWalls();
+	bool checkTankWallCollision();
 	
 	// main window
 	sf::RenderWindow m_window;
@@ -32,6 +34,8 @@ protected:
 	sf::Texture m_texture;
 	std::vector<sf::Sprite>  m_sprites;
 	std::unique_ptr<Tank> m_tank;
+	// A container for the Wall sprites
+	std::vector<std::unique_ptr<sf::Sprite>> m_wallSprites;
 	KeyHandler m_keyHandler;
 	
 	

@@ -1,4 +1,5 @@
 #include "Game.h"
+#include "CollisionDetector.h"
 
 /// <summary>
 /// @author RP
@@ -31,13 +32,7 @@ Game::Game()
 		return;
 	}
 
-	
 
-	/*if (!m_texture.loadFromFile("E-100.png"))
-	{
-		std::string s("Error loading texture");
-		throw std::exception(s.c_str());
-	}*/
 	
 	if (!m_bgTexture.loadFromFile(m_level.m_background.m_fileName))
 	{
@@ -70,6 +65,7 @@ Game::Game()
 	}
 
 	m_tank.reset(new Tank(m_texture, m_level.m_tank.m_position, m_keyHandler));
+	generateWalls();
 }
 
 
@@ -122,6 +118,40 @@ void Game::processEvents()
 	}
 }
 
+void Game::generateWalls()
+{
+	sf::IntRect wallRect(2, 129, 33, 23);
+	// Create the Walls 
+	for (ObstacleData const &obstacle : m_level.m_obstacles)
+	{
+		std::unique_ptr<sf::Sprite> sprite(new sf::Sprite());
+		sprite->setTexture(m_texture);
+		sprite->setTextureRect(wallRect);
+		sprite->setOrigin(wallRect.width / 2.0, wallRect.height / 2.0);
+		sprite->setPosition(obstacle.m_position);
+		sprite->setRotation(obstacle.m_rotation);
+		m_wallSprites.push_back(std::move(sprite));
+	}
+}
+bool Game::checkTankWallCollision()
+{
+	for (std::unique_ptr<sf::Sprite> const & sprite : m_wallSprites)
+	{
+		if (CollisionDetector::collision(m_tank->getTurretSprite(), *sprite))
+		{
+			m_tank->stop();
+			return true;
+			
+		}
+		if (CollisionDetector::collision(m_tank->getBaseSprite(), *sprite))
+		{
+			m_tank->stop();
+			return true;
+			
+		}
+	}
+	return false;
+}
 /// <summary>
 /// @brief Handle all user input.
 /// 
@@ -156,6 +186,8 @@ void Game::processGameEvents(sf::Event& event)
 void Game::update(double dt)
 {
 	m_tank->update(dt);
+	checkTankWallCollision();
+	
 }
 
 
@@ -171,12 +203,14 @@ void Game::render()
 	m_window.draw(m_bgSprite);
 	m_tank->render(m_window);
 	
-	for (auto &sprite : m_sprites)
+	
+	for (auto &m_sprite : m_wallSprites)
 	{
-		m_window.draw(sprite);
+		m_window.draw(*m_sprite);
 
 	}
 	m_window.display();
 }
+
 
 
