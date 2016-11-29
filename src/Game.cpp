@@ -26,6 +26,8 @@ Game::Game()
 {	
 	m_window.setVerticalSyncEnabled(true);
 	int currentLevel = 1;
+	countDown = 60;
+	m_ss << countDown;
 
 	if (!LevelLoader::load(currentLevel, m_level))
 	{
@@ -39,31 +41,24 @@ Game::Game()
 		std::string s("Error loading texture");
 		throw std::exception(s.c_str());
 	}
-	//m_sprite.setPosition(m_level.m_tank.m_position.x, m_level.m_tank.m_position.y);
+	
 	
 	m_bgSprite.setTexture(m_bgTexture);
 	
-	//m_sprite.setTexture(m_texture);
-	//m_sprite.setOrigin(m_texture.getSize().x / 2.0, m_texture.getSize().y / 2.0);
-	//m_sprite.setRotation(270);
-	//m_sprite.rotate(90);
+	
 
 	sf::Sprite sprite;
 	sprite.setTexture(m_texture);
 	
-	/*for (auto &obstacle : m_level.m_obstacles)
-	{
-		sprite.setPosition(obstacle.m_position);
-		sprite.rotate(obstacle.m_rotation);
-		m_sprites.push_back(sprite);
-	}*/
 
 	if (!m_texture.loadFromFile("./resources/images/SpriteSheet.png"))
 	{
 		std::string s("Error loading texture");
 		throw std::exception(s.c_str());
 	}
-
+	//Load font
+	m_font.loadFromFile("C:/windows/fonts/times.ttf");
+	m_text.setFont(m_font);
 	m_tank.reset(new Tank(m_texture, m_level.m_tank.m_position, m_keyHandler));
 	generateWalls();
 }
@@ -187,6 +182,25 @@ void Game::update(double dt)
 {
 	m_tank->update(dt);
 	checkTankWallCollision();
+	m_timeSinceLastUpdate += m_clock.restart().asMilliseconds();
+	
+	if (m_timeSinceLastUpdate > 1000 )
+	{
+	    // reset time passed
+		//m_clock.restart();
+		// decrement seconds timer
+		m_timeSinceLastUpdate = 0;
+		countDown--;
+		std::cout << countDown << std::endl;
+	
+		m_ss.str("");
+		m_ss << countDown;
+		
+		
+		
+		//m_text = m_ss;
+	}
+	//std::stringstream m_ss = std::to_string(countDown);
 	
 }
 
@@ -203,12 +217,18 @@ void Game::render()
 	m_window.draw(m_bgSprite);
 	m_tank->render(m_window);
 	
+
+
+	
 	
 	for (auto &m_sprite : m_wallSprites)
 	{
 		m_window.draw(*m_sprite);
 
 	}
+	m_text.setString(m_ss.str());
+	m_text.setPosition(20, 20);
+	m_window.draw(m_text);
 	m_window.display();
 }
 

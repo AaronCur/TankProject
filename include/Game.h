@@ -34,10 +34,17 @@ protected:
 	sf::Texture m_texture;
 	std::vector<sf::Sprite>  m_sprites;
 	std::unique_ptr<Tank> m_tank;
+	std::string timerValue;
 	// A container for the Wall sprites
 	std::vector<std::unique_ptr<sf::Sprite>> m_wallSprites;
 	KeyHandler m_keyHandler;
-	
+	sf::Clock m_clock;
+	double m_timeSinceLastUpdate;
+	sf::Font m_font;
+	sf::Text m_text;
+	int countDown;
+
+	std::stringstream m_ss;
 	
 
 };
