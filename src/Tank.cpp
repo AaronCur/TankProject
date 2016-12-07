@@ -1,10 +1,11 @@
 #include "Tank.h"
 #include <Thor/Math.hpp>
+#include "Bullet.h"
 
 double const Tank::DEG_TO_RAD = thor::Pi / 180.0f;
 
 Tank::Tank(sf::Texture const & texture, sf::Vector2f const & pos, KeyHandler &key)
-: m_texture(texture),m_rotation(0) , m_speed(0), m_turretRotation(0), m_keyHandler(key)
+	: m_texture(texture), m_rotation(0), m_speed(0), m_turretRotation(0), m_keyHandler(key)
 {
 	initSprites(pos);
 	
@@ -141,9 +142,13 @@ void Tank::handleKeyInput()
 		snap();
 	}
 	
-
 }
-
+//void Tank::fire(double dt)
+//{
+//	m_bullet.setPosition(m_tankBase.getPosition().x + cos(m_rotation*DEG_TO_RAD) * m_speed * (dt / 1000),
+//    m_tankBase.getPosition().y + sin(m_rotation * DEG_TO_RAD) * m_speed *(dt / 1000));
+//	m_tankBase.setRotation(m_rotation);
+//}
 sf::Sprite const & Tank::getTurretSprite() const
 {
 	return m_turret;

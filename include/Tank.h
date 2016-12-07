@@ -20,6 +20,7 @@ public:
 	void decreaseTurretRotation();
 	void increaseTurretRotation();
 	void snap();
+	void fire();
 	double m_speed;
 	double m_rotation;
 	double m_turretRotation;
@@ -35,6 +36,8 @@ private:
 	sf::Sprite m_tankBase;
 	sf::Sprite m_turret;
 	sf::Texture const & m_texture;
+
+	//Bullet m_bullet;
 	
 	KeyHandler &m_keyHandler;
 

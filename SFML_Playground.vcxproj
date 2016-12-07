@@ -31,6 +31,7 @@
     <ClInclude Include="include\main.h" />
     <ClInclude Include="include\OrientedBoundingBox.h" />
     <ClInclude Include="include\Tank.h" />
+    <ClInclude Include="Target.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\CollisionDetector.cpp" />
@@ -40,6 +41,7 @@
     <ClCompile Include="src\main.cpp" />
     <ClCompile Include="src\OrientedBoundingBox.cpp" />
     <ClCompile Include="src\Tank.cpp" />
+    <ClCompile Include="Target.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{F10133B9-852C-4A93-A994-DC0D1C009AD5}</ProjectGuid>

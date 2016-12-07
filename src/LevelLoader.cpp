@@ -15,8 +15,11 @@ void operator >> (const YAML::Node& backgroundNode, BackgroundData& background)
 
 void operator >> (const YAML::Node& tankNode, TankData& tank)
 {
-	tank.m_position.x = tankNode["position"]["x"].as<float>();
-	tank.m_position.y = tankNode["position"]["y"].as<float>();
+	
+	
+	int rnd = rand() % 4 + 1;
+	tank.m_position.x = tankNode["position" + std::to_string(rnd)]["x"].as<float>();
+	tank.m_position.y = tankNode["position" + std::to_string(rnd)]["y"].as<float>();
 }
 
 

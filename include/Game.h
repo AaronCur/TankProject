@@ -3,6 +3,7 @@
 #include <SFML/Graphics.hpp>
 #include "LevelLoader.h"
 #include "Tank.h"
+#include "Bullet.h"
 #include "KeyHandler.h"
 
 
@@ -34,6 +35,7 @@ protected:
 	sf::Texture m_texture;
 	std::vector<sf::Sprite>  m_sprites;
 	std::unique_ptr<Tank> m_tank;
+	
 	std::string timerValue;
 	// A container for the Wall sprites
 	std::vector<std::unique_ptr<sf::Sprite>> m_wallSprites;

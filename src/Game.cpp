@@ -60,6 +60,7 @@ Game::Game()
 	m_font.loadFromFile("C:/windows/fonts/times.ttf");
 	m_text.setFont(m_font);
 	m_tank.reset(new Tank(m_texture, m_level.m_tank.m_position, m_keyHandler));
+	
 	generateWalls();
 }
 
@@ -181,6 +182,7 @@ void Game::processGameEvents(sf::Event& event)
 void Game::update(double dt)
 {
 	m_tank->update(dt);
+	
 	checkTankWallCollision();
 	m_timeSinceLastUpdate += m_clock.restart().asMilliseconds();
 	
@@ -216,6 +218,7 @@ void Game::render()
 	m_window.clear(sf::Color(0, 0, 0, 0));
 	m_window.draw(m_bgSprite);
 	m_tank->render(m_window);
+	
 	
 
 
