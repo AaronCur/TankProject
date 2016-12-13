@@ -47,6 +47,9 @@
     <ClInclude Include="include\OrientedBoundingBox.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Bullet.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="Target.h">
       <Filter>Header Files</Filter>
     </ClInclude>

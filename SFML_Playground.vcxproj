@@ -24,6 +24,7 @@
     <Image Include="resources\images\SpriteSheet.png" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Bullet.h" />
     <ClInclude Include="include\CollisionDetector.h" />
     <ClInclude Include="include\Game.h" />
     <ClInclude Include="include\KeyHandler.h" />
