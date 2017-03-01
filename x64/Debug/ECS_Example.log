@@ -1,0 +1,57 @@
+﻿  LevelLoader.cpp
+g:\programming-project2\src\utils\levelloader.cpp(1): fatal error C1083: Cannot open include file: 'utils/LevelLoader.h': No such file or directory
+  CollisionBox.cpp
+g:\programming-project2\src\utils\collisionbox.cpp(1): fatal error C1083: Cannot open include file: 'utils/CollisionBox.h': No such file or directory
+  BTMath.cpp
+g:\programming-project2\src\utils\btmath.cpp(2): fatal error C1083: Cannot open include file: 'utils/BTMath.h': No such file or directory
+  RenderSystem.cpp
+g:\programming-project2\src\systems\rendersystem.cpp(1): fatal error C1083: Cannot open include file: 'systems/RenderSystem.h': No such file or directory
+  PlayerControlSystem.cpp
+g:\programming-project2\src\systems\playercontrolsystem.cpp(1): fatal error C1083: Cannot open include file: 'systems/PlayerControlSystem.h': No such file or directory
+  MovementSystem.cpp
+g:\programming-project2\src\systems\movementsystem.cpp(1): fatal error C1083: Cannot open include file: 'systems/MovementSystem.h': No such file or directory
+  LevelSystem.cpp
+g:\programming-project2\src\systems\levelsystem.cpp(1): fatal error C1083: Cannot open include file: 'systems/LevelSystem.h': No such file or directory
+  AiControlSystem.cpp
+g:\programming-project2\src\systems\aicontrolsystem.cpp(1): fatal error C1083: Cannot open include file: 'systems/AiControlSystem.h': No such file or directory
+  main.cpp
+g:\programming-project2\src\main.cpp(2): fatal error C1083: Cannot open include file: 'Game.h': No such file or directory
+  Wall.cpp
+g:\programming-project2\src\components\wall.cpp(1): fatal error C1083: Cannot open include file: 'components/Wall.h': No such file or directory
+  Volume.cpp
+g:\programming-project2\src\components\volume.cpp(1): fatal error C1083: Cannot open include file: 'components/Volume.h': No such file or directory
+  Turret.cpp
+g:\programming-project2\src\components\turret.cpp(1): fatal error C1083: Cannot open include file: 'components/Turret.h': No such file or directory
+  Tank.cpp
+g:\programming-project2\src\components\tank.cpp(1): fatal error C1083: Cannot open include file: 'components/Tank.h': No such file or directory
+  Position.cpp
+g:\programming-project2\src\components\position.cpp(1): fatal error C1083: Cannot open include file: 'components/Position.h': No such file or directory
+  PlayerControl.cpp
+g:\programming-project2\src\components\playercontrol.cpp(1): fatal error C1083: Cannot open include file: 'components/PlayerControl.h': No such file or directory
+  Parent.cpp
+g:\programming-project2\src\components\parent.cpp(1): fatal error C1083: Cannot open include file: 'components/Parent.h': No such file or directory
+  Motion.cpp
+g:\programming-project2\src\components\motion.cpp(1): fatal error C1083: Cannot open include file: 'components/Motion.h': No such file or directory
+  Display.cpp
+g:\programming-project2\src\components\display.cpp(1): fatal error C1083: Cannot open include file: 'components/Display.h': No such file or directory
+  Background.cpp
+g:\programming-project2\src\components\background.cpp(1): fatal error C1083: Cannot open include file: 'components/Background.h': No such file or directory
+  Ai.cpp
+g:\programming-project2\src\components\ai.cpp(1): fatal error C1083: Cannot open include file: 'components/Ai.h': No such file or directory
+  Generating Code...
+  Compiling...
+  TankAi.cpp
+g:\programming-project2\src\ai\tankai.cpp(1): fatal error C1083: Cannot open include file: 'ai/TankAi.h': No such file or directory
+  ScreenSize.cpp
+g:\programming-project2\src\screensize.cpp(1): fatal error C1083: Cannot open include file: 'ScreenSize.h': No such file or directory
+  ResourcePath.cpp
+g:\programming-project2\src\resourcepath.cpp(1): fatal error C1083: Cannot open include file: 'ResourcePath.hpp': No such file or directory
+  KeyHandler.cpp
+g:\programming-project2\src\keyhandler.cpp(1): fatal error C1083: Cannot open include file: 'KeyHandler.h': No such file or directory
+  GameManager.cpp
+g:\programming-project2\src\gamemanager.cpp(1): fatal error C1083: Cannot open include file: 'GameManager.h': No such file or directory
+  Game.cpp
+g:\programming-project2\src\game.cpp(4): fatal error C1083: Cannot open include file: 'Game.h': No such file or directory
+  EntityCreator.cpp
+g:\programming-project2\src\entitycreator.cpp(1): fatal error C1083: Cannot open include file: 'EntityCreator.h': No such file or directory
+  Generating Code...

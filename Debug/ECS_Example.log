@@ -1,0 +1,36 @@
+﻿  LINK : G:\Programming-project2\Debug\ECS_Example.exe not found or not built by the last incremental link; performing full link
+entityx-d.lib(System.obj) : warning LNK4099: PDB 'entityx.pdb' was not found with 'entityx-d.lib(System.obj)' or at 'G:\Programming-project2\Debug\entityx.pdb'; linking object as if no debug info
+entityx-d.lib(Event.obj) : warning LNK4099: PDB 'entityx.pdb' was not found with 'entityx-d.lib(Event.obj)' or at 'G:\Programming-project2\Debug\entityx.pdb'; linking object as if no debug info
+entityx-d.lib(Entity.obj) : warning LNK4099: PDB 'entityx.pdb' was not found with 'entityx-d.lib(Entity.obj)' or at 'G:\Programming-project2\Debug\entityx.pdb'; linking object as if no debug info
+entityx-d.lib(Pool.obj) : warning LNK4099: PDB 'entityx.pdb' was not found with 'entityx-d.lib(Pool.obj)' or at 'G:\Programming-project2\Debug\entityx.pdb'; linking object as if no debug info
+libyaml-cppmdd.lib(directives.obj) : warning LNK4099: PDB 'yaml-cpp static md.pdb' was not found with 'libyaml-cppmdd.lib(directives.obj)' or at 'G:\Programming-project2\Debug\yaml-cpp static md.pdb'; linking object as if no debug info
+libyaml-cppmdd.lib(exp.obj) : warning LNK4099: PDB 'yaml-cpp static md.pdb' was not found with 'libyaml-cppmdd.lib(exp.obj)' or at 'G:\Programming-project2\Debug\yaml-cpp static md.pdb'; linking object as if no debug info
+libyaml-cppmdd.lib(memory.obj) : warning LNK4099: PDB 'yaml-cpp static md.pdb' was not found with 'libyaml-cppmdd.lib(memory.obj)' or at 'G:\Programming-project2\Debug\yaml-cpp static md.pdb'; linking object as if no debug info
+libyaml-cppmdd.lib(nodebuilder.obj) : warning LNK4099: PDB 'yaml-cpp static md.pdb' was not found with 'libyaml-cppmdd.lib(nodebuilder.obj)' or at 'G:\Programming-project2\Debug\yaml-cpp static md.pdb'; linking object as if no debug info
+libyaml-cppmdd.lib(node_data.obj) : warning LNK4099: PDB 'yaml-cpp static md.pdb' was not found with 'libyaml-cppmdd.lib(node_data.obj)' or at 'G:\Programming-project2\Debug\yaml-cpp static md.pdb'; linking object as if no debug info
+libyaml-cppmdd.lib(null.obj) : warning LNK4099: PDB 'yaml-cpp static md.pdb' was not found with 'libyaml-cppmdd.lib(null.obj)' or at 'G:\Programming-project2\Debug\yaml-cpp static md.pdb'; linking object as if no debug info
+libyaml-cppmdd.lib(parse.obj) : warning LNK4099: PDB 'yaml-cpp static md.pdb' was not found with 'libyaml-cppmdd.lib(parse.obj)' or at 'G:\Programming-project2\Debug\yaml-cpp static md.pdb'; linking object as if no debug info
+libyaml-cppmdd.lib(parser.obj) : warning LNK4099: PDB 'yaml-cpp static md.pdb' was not found with 'libyaml-cppmdd.lib(parser.obj)' or at 'G:\Programming-project2\Debug\yaml-cpp static md.pdb'; linking object as if no debug info
+libyaml-cppmdd.lib(regex_yaml.obj) : warning LNK4099: PDB 'yaml-cpp static md.pdb' was not found with 'libyaml-cppmdd.lib(regex_yaml.obj)' or at 'G:\Programming-project2\Debug\yaml-cpp static md.pdb'; linking object as if no debug info
+libyaml-cppmdd.lib(scanner.obj) : warning LNK4099: PDB 'yaml-cpp static md.pdb' was not found with 'libyaml-cppmdd.lib(scanner.obj)' or at 'G:\Programming-project2\Debug\yaml-cpp static md.pdb'; linking object as if no debug info
+libyaml-cppmdd.lib(scanscalar.obj) : warning LNK4099: PDB 'yaml-cpp static md.pdb' was not found with 'libyaml-cppmdd.lib(scanscalar.obj)' or at 'G:\Programming-project2\Debug\yaml-cpp static md.pdb'; linking object as if no debug info
+libyaml-cppmdd.lib(scantag.obj) : warning LNK4099: PDB 'yaml-cpp static md.pdb' was not found with 'libyaml-cppmdd.lib(scantag.obj)' or at 'G:\Programming-project2\Debug\yaml-cpp static md.pdb'; linking object as if no debug info
+libyaml-cppmdd.lib(scantoken.obj) : warning LNK4099: PDB 'yaml-cpp static md.pdb' was not found with 'libyaml-cppmdd.lib(scantoken.obj)' or at 'G:\Programming-project2\Debug\yaml-cpp static md.pdb'; linking object as if no debug info
+libyaml-cppmdd.lib(simplekey.obj) : warning LNK4099: PDB 'yaml-cpp static md.pdb' was not found with 'libyaml-cppmdd.lib(simplekey.obj)' or at 'G:\Programming-project2\Debug\yaml-cpp static md.pdb'; linking object as if no debug info
+libyaml-cppmdd.lib(singledocparser.obj) : warning LNK4099: PDB 'yaml-cpp static md.pdb' was not found with 'libyaml-cppmdd.lib(singledocparser.obj)' or at 'G:\Programming-project2\Debug\yaml-cpp static md.pdb'; linking object as if no debug info
+libyaml-cppmdd.lib(stream.obj) : warning LNK4099: PDB 'yaml-cpp static md.pdb' was not found with 'libyaml-cppmdd.lib(stream.obj)' or at 'G:\Programming-project2\Debug\yaml-cpp static md.pdb'; linking object as if no debug info
+libyaml-cppmdd.lib(tag.obj) : warning LNK4099: PDB 'yaml-cpp static md.pdb' was not found with 'libyaml-cppmdd.lib(tag.obj)' or at 'G:\Programming-project2\Debug\yaml-cpp static md.pdb'; linking object as if no debug info
+  ECS_Example.vcxproj -> G:\Programming-project2\Debug\ECS_Example.exe
+  ECS_Example.vcxproj -> G:\Programming-project2\Debug\ECS_Example.pdb (Partial PDB)
+  G:\Programming-project2\dlls\sfml-audio-2.dll
+  G:\Programming-project2\dlls\sfml-audio-d-2.dll
+  G:\Programming-project2\dlls\sfml-graphics-2.dll
+  G:\Programming-project2\dlls\sfml-graphics-d-2.dll
+  G:\Programming-project2\dlls\sfml-network-2.dll
+  G:\Programming-project2\dlls\sfml-network-d-2.dll
+  G:\Programming-project2\dlls\sfml-system-2.dll
+  G:\Programming-project2\dlls\sfml-system-d-2.dll
+  G:\Programming-project2\dlls\sfml-window-2.dll
+  G:\Programming-project2\dlls\sfml-window-d-2.dll
+  G:\Programming-project2\dlls\thor-d.dll
+         11 file(s) copied.
